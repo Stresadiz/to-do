@@ -30,6 +30,7 @@ body {
   width: 80%;
   padding: 1em;
   margin: 1em;
+  position: relative;
 }
 .card__header {
   padding: 0.5em;
