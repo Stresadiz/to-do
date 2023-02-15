@@ -7,6 +7,7 @@ addBtn.addEventListener("click", function() {
   const note = noteTextarea.value;
   const title = noteTitle.value;
 
+
   // Create a new card element
   const newCard = document.createElement("div");
   newCard.classList.add("card");
@@ -25,7 +26,12 @@ addBtn.addEventListener("click", function() {
   `;
 
   // Append the new card to the section
-  section.appendChild(newCard);
+  if (title !== "" && note !== "") {
+    section.appendChild(newCard);
+  } else {
+    alert("The note must have a title and a content, please complete them");
+  }
+  
 
   // Reset the note textarea
   noteTextarea.value = "";
